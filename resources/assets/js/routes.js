@@ -1,9 +1,9 @@
-import Home from './components/Home.vue';
+import Home from './pages/dashboard/Home.vue';
 import Login from './components/auth/Login.vue';
-import CemeteriesMain from './components/cemeteries/Main.vue';
-import CemeteriesList from './components/cemeteries/List.vue';
-import NewCemetery from './components/cemeteries/New.vue';
-import Cemetery from './components/cemeteries/View.vue';
+import CemeteriesMain from './pages/cemeteries/Main.vue';
+import CemeteriesList from './pages/cemeteries/List.vue';
+import NewCemetery from './pages/cemeteries/New.vue';
+import CemeteryPlanning from './pages/cemeteries/CemeteryPlanning.vue';
 
 export const routes = [
     {
@@ -33,8 +33,8 @@ export const routes = [
                 component: NewCemetery
             },
             {
-                path: ':id',
-                component: Cemetery
+                path: 'cemetery_planning/:id',
+                component: CemeteryPlanning
             }
         ]
     }
