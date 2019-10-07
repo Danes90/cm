@@ -4,6 +4,7 @@ import CemeteriesMain from './components/cemeteries/Main.vue';
 import CemeteriesList from './components/cemeteries/List.vue';
 import NewCemetery from './components/cemeteries/New.vue';
 import Cemetery from './components/cemeteries/View.vue';
+import UpdateCemetery from './components/cemeteries/Update.vue';
 
 export const routes = [
     {
@@ -35,7 +36,15 @@ export const routes = [
             {
                 path: ':id',
                 component: Cemetery
+            },
+            {
+                path:'update/:id',
+                component:UpdateCemetery
+            },
+            {
+                path:'delete/:id',
             }
+
         ]
     }
 ];

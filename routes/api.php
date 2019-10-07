@@ -29,5 +29,16 @@ Route::group(['middleware' => 'jwt.auth'], function ($router) {
     Route::get('cemeteries', 'CemeteriesController@all');
     Route::get('cemeteries/{id}', 'CemeteriesController@get');
     Route::post('cemeteries/new', 'CemeteriesController@new');
+    Route::post('cemeteries/update','CemeteriesController@update');
+    Route::delete('cemeteries/delete/{id}','CemeteriesController@delete');
+});
 
+// Users routes
+Route::group(['middleware' => 'jwt.auth'], function ($router) {
+
+    Route::get('users', 'UsersController@all');
+    Route::get('users/{id}', 'UsersController@get');
+    Route::post('users/new', 'UsersController@new');
+    Route::post('users/update','UsersController@update');
+    Route::delete('users/delete/{id}','UsersController@delete');
 });
