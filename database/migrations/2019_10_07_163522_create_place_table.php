@@ -19,7 +19,7 @@ class CreatePlaceTable extends Migration
             $table->unsignedBigInteger('cemetery_id');
             $table->string('comment');
             $table->bigInteger('price');
-            $table->timestamp('lease_date');
+            $table->date('lease_date');
             $table->bigInteger('seats');
             $table->foreign('cemetery_id')->references('id')->on('cemeteries')->onDelete('cascade');
             $table->timestamps();

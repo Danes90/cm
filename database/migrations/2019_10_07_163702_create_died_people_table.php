@@ -19,11 +19,11 @@ class CreateDiedPeopleTable extends Migration
             $table->string('address');
             $table->string('job');
             $table->string('mother_name');
-            $table->timestamp('born_date');
-            $table->timestamp('died_date');
-            $table->timestamp('cemetery_date');
-            $table->unsignedInteger('place_id');
-            $table->foreign('place_id')->references('id')->on('places')->onDelete('cascade');
+            $table->date('born_date');
+            $table->date('died_date');
+            $table->date('cemetery_date');
+            $table->unsignedBigInteger('place_id');
+            $table->foreign('place_id')->references('id')->on('place')->onDelete('cascade');
             $table->timestamps();
         });
     }
