@@ -42,3 +42,14 @@ Route::group(['middleware' => 'jwt.auth'], function ($router) {
     Route::post('users/update','UsersController@update');
     Route::delete('users/delete/{id}','UsersController@delete');
 });
+
+// Places routes
+Route::group(['middleware' => 'jwt.auth'], function ($router) {
+
+    Route::get('places', 'PlaceController@all');
+    Route::get('places/{id}', 'PlaceController@get');
+    Route::post('places/new', 'PlaceController@new');
+    Route::post('places/update','PlaceController@update');
+    Route::delete('places/delete/{id}','PlaceController@delete');
+});
+
